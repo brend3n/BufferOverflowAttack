@@ -1,0 +1,12 @@
+# use the following command line to compile the codes
+
+# Explanation of compling flags:
+# the flag "-fno-stack-protector" is used to disable "stackGuard" protection.
+# the flag "-z execstack" is used to disable "non-executable stack" default protection.
+#            so that the shellcode in stack memory can be executed.
+# the flag "-ggdb" is to enclude source code in the generated executable code 
+#            to faciliate debugger. 
+
+gcc -ggdb -fno-stack-protector -z execstack -o target target.c
+
+
